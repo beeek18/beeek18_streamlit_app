@@ -14,7 +14,7 @@ st.markdown("---")
 
 st.sidebar.header("⚙️ Настройки")
 start_date = st.sidebar.date_input("Начальная дата", value=pd.to_datetime("2023-03-01"))
-end_date = st.sidebar.date_input("Конечная дата", value=pd.to_datetime("2026-03-03"))
+end_date = st.sidebar.date_input("Конечная дата", value=pd.to_datetime("2026-03-02"))
 chart_type = st.sidebar.selectbox("Тип графика", ["Линейный", "Свечной", "Область"])
 show_volume = st.sidebar.checkbox("Показать объём торгов", value=True)
 
