@@ -94,13 +94,11 @@ st.markdown("---")
 with st.expander("📄 Показать данные"):
     st.dataframe(df_filtered, use_container_width=True)
 
+
 def fig_to_png(fig_plotly, title="chart"):
     fig_mpl, ax = plt.subplots(figsize=(10, 5))
     ax.scatter(
-        df_filtered["total_bill"],
-        df_filtered["tip"],
-        alpha=0.6,
-        color="#636EFA"
+        df_filtered["total_bill"], df_filtered["tip"], alpha=0.6, color="#636EFA"
     )
     ax.set_xlabel("Счёт ($)")
     ax.set_ylabel("Чаевые ($)")
@@ -111,6 +109,7 @@ def fig_to_png(fig_plotly, title="chart"):
     buf.seek(0)
     plt.close(fig_mpl)
     return buf
+
 
 buf = fig_to_png(fig1, title="Счёт vs Чаевые")
 st.download_button(

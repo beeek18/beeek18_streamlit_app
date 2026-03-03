@@ -12,22 +12,17 @@ git clone https://github.com/beeek18/beeek18_streamlit_app.git
 cd beeek18_streamlit_app
 ```
 
-### 2. Создай `.env` файл
-```bash
-cp .env.example .env
-```
-
-### 3. Запусти
+### 2. Запусти
 ```bash
 docker compose up --build -d
 ```
 
-### 4. Открой в браузере
+### 3. Открой в браузере
 ```
 http://localhost:8501
 ```
 
-### 5. Остановка
+### 4. Остановка
 ```bash
 docker compose down
 ```
@@ -54,7 +49,8 @@ beeek18_streamlit_app/
 ├── Dockerfile
 ├── docker-compose.yml
 ├── requirements.txt
-└── pyproject.toml
+├── pyproject.toml
+└── .gitignore
 ```
 
 ---
@@ -69,7 +65,7 @@ beeek18_streamlit_app/
 - Скачать график в PNG
 
 ### 🍽️ Анализ чаевых
-- Загрузка своего CSV файла
+- Загрузка своего CSV файла (с валидацией колонок)
 - Фильтрация по дню недели и времени
 - Scatter, box, histogram — через Plotly
 - Heatmap корреляций — через Seaborn
@@ -84,4 +80,13 @@ beeek18_streamlit_app/
 - [Plotly](https://plotly.com/python/) — интерактивные графики
 - [Pandas](https://pandas.pydata.org) — обработка данных
 - [Seaborn](https://seaborn.pydata.org) — статистические графики
+- [Matplotlib](https://matplotlib.org) — экспорт графиков в PNG
 - [Docker](https://www.docker.com) — контейнеризация
+
+---
+
+## 🐍 Требования
+
+- Python 3.13+
+- Docker & Docker Compose
+- uv (для локального запуска)

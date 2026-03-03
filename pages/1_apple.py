@@ -95,6 +95,7 @@ st.markdown("---")
 with st.expander("📄 Показать данные"):
     st.dataframe(df.tail(30), use_container_width=True)
 
+
 def fig_to_png(df, column="Close", title="AAPL"):
     fig_mpl, ax = plt.subplots(figsize=(12, 5))
     ax.plot(df.index, df[column], color="#636EFA", linewidth=1.5)
@@ -111,6 +112,8 @@ def fig_to_png(df, column="Close", title="AAPL"):
     plt.close(fig_mpl)
     return buf
 
+
 buf = fig_to_png(df, title="Котировки AAPL")
-st.download_button("📥 Скачать график (PNG)", data=buf,
-                   file_name="apple_chart.png", mime="image/png")
+st.download_button(
+    "📥 Скачать график (PNG)", data=buf, file_name="apple_chart.png", mime="image/png"
+)
