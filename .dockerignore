@@ -1,9 +1,14 @@
 .venv/
 .git/
+.env
+logs/
 __pycache__/
 *.pyc
-.ruff_cache/
+.python-version
+README.md
+.gitignore
 .ty_cache/
+.ruff_cache/
 .vscode/
-.DS_Store
-.env
+uv.lock
+pyproject.toml
