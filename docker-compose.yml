@@ -9,3 +9,9 @@ services:
       - .env
     volumes:
       - ./data:/app/data
+    networks:
+      - shared-streamlit-bot-network
+
+networks:
+  shared-streamlit-bot-network:
+    external: true
